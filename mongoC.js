@@ -1,7 +1,11 @@
 import { MongoClient } from "mongodb";
 
+import dotenv from 'dotenv';
+dotenv.config();
+
 const password = encodeURIComponent(process.env.MONGO_PASSWORD.trim());
-const connectionString = `mongodb+srv://integrationninjas:${password}@devcluster.xf2gcci.mongodb.net/?retryWrites=true&w=majority`; // clustore url
+const connectionString = `mongodb+srv://insafinhaam:${password}@cluster0.kazzf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`; // clustore url
+
 const client = new MongoClient(connectionString);
 let conn;
 try {
